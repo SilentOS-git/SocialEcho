@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ashishguruani/socialecho-backend-beta:v3
+          image: ashishguruani/socialecho-backend-beta:v1
           env:
           - name: CLIENT_URL
             value: "http://13.94.228.200:31000/"
