@@ -19,6 +19,43 @@ spec:
       containers:
         - name: backend
           image: ashishguruani/socialecho-backend-beta:v2
+          env:
+          - name: CLIENT_URL
+            value: "http://13.94.228.200:31000/"
+          - name: MONGODB_URI
+            value: "mongodb://mongo-service/socialecho"
+          - name: PORT
+            value: "8080"
+        
+          - name: SECRET
+            value: "SECRET"
+          - name: REFRESH_SECRET
+            value: "REFRESH"
+        
+          - name: CRYPTO_KEY
+            value: "CRYPTOKEY"
+        
+          - name: EMAIL
+            value: "aguruaniebbo@gmail.com"
+          - name: PASSWORD
+            value: "hucs fzbj zgyr trmu"
+          - name: EMAIL_SERVICE
+            value: "smtp.gmail.com"
+
+          - name: PERSPECTIVE_API_KEY
+            value: "AIzaSyCX9TvngXS7I6AToBqKxA1E2E-eE3JjlvA"
+          - name: TEXTRAZOR_API_KEY
+            value: "7606c7ed74bed594eb599f5da8cc81718405bb4e7fbaad47d73a1eb3"
+          - name: INTERFACE_API_KEY
+            value: "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"
+          - name: PERSPECTIVE_API_DISCOVERY_URL
+            value: "https://commentanalyzer.googleapis.com/$discovery/rest?version=v1alpha1"
+          - name: TEXTRAZOR_API_URL
+            value: "https://api.textrazor.com/"
+          - name: INTERFACE_API_URL
+            value: "https://api-inference.huggingface.co/models/facebook/bart-large-mnli"
+          - name: CLASSIFIER_API_URL
+            value: "http://127.0.0.1:5000/classify"
           ports:
             - containerPort: 8080
 ---
