@@ -78,7 +78,7 @@ pipeline {
                             docker_build("socialecho-backend-beta","${params.BACKEND_DOCKER_TAG}","ashishguruani")
                         }
                     
-                        dir('frontend'){
+                        dir('client'){
                             docker_build("socialecho-frontend-beta","${params.FRONTEND_DOCKER_TAG}","ashishguruani")
                         }
                 }
