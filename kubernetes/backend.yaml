@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ashishguruani/socialecho-backend-beta:v2
+          image: ashishguruani/socialecho-backend-beta:v3
           ports:
             - containerPort: 8080
 ---
