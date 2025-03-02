@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = process.env.REACT_APP_API_URL;
+console.log(BASE_URL, process.env)
 const ADMIN_URL = `${BASE_URL}/admin`;
 
 const authInterceptor = (req) => {
