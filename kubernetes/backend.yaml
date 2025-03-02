@@ -55,7 +55,7 @@ spec:
           - name: INTERFACE_API_URL
             value: "https://api-inference.huggingface.co/models/facebook/bart-large-mnli"
           - name: CLASSIFIER_API_URL
-            value: "http://127.0.0.1:5000/classify"
+            value: "http://13.94.228.200:31200/classify"
           ports:
             - containerPort: 8080
 ---
