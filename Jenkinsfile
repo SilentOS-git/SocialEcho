@@ -81,6 +81,9 @@ pipeline {
                         dir('client'){
                             docker_build("socialecho-frontend-beta","${params.FRONTEND_DOCKER_TAG}","ashishguruani")
                         }
+                            dir('classifier_server'){
+                            docker_build("socialecho-classifier-beta","${params.BACKEND_DOCKER_TAG}","ashishguruani")
+                        }
                 }
             }
         }
@@ -90,6 +93,7 @@ pipeline {
                 script{
                     docker_push("socialecho-backend-beta","${params.BACKEND_DOCKER_TAG}","ashishguruani") 
                     docker_push("socialecho-frontend-beta","${params.FRONTEND_DOCKER_TAG}","ashishguruani")
+                    docker_push("socialecho-classifier-beta","${params.BACKEND_DOCKER_TAG}","ashishguruani")
                 }
             }
         }

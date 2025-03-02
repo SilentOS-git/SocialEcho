@@ -48,6 +48,11 @@ pipeline {
                             sed -i -e s/socialecho-frontend-beta.*/socialecho-frontend-beta:${params.FRONTEND_DOCKER_TAG}/g frontend.yaml
                         """
                     }
+                      dir('kubernetes'){
+                        sh """
+                            sed -i -e s/socialecho--beta.*/socialecho-classifier-beta:${params.BACKEND_DOCKER_TAG}/g classifier_api.yaml
+                        """
+                    }
                     
                 }
             }
