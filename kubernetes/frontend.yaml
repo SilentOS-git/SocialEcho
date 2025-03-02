@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ashishguruani/socialecho-frontend-beta:v1
+          image: ashishguruani/socialecho-frontend-beta:v3
           env:
           - name :"REACT_APP_API_URL"
             value:"http://13.94.228.200:31100"  
